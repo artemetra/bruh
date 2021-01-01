@@ -10,4 +10,4 @@ async def _(event):
         return
     for i in range(100):
         await asyncio.sleep(0.1)
-        await event.edit("cum " + i)
+        await event.edit("cum " + str(i))
