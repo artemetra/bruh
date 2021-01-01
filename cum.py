@@ -7,5 +7,4 @@ import asyncio
 async def _(event):
     if event.fwd_from:
         return
-    for _ in range(100):
-        await event.edit("".join("cum" + _))
+    await event.edit("".join("cum" + _))
