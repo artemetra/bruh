@@ -9,4 +9,5 @@ async def _(event):
     if event.fwd_from:
         return
     for i in range(100):
+        await asyncio.sleep(0.1)
         await event.edit("cum " + i)
