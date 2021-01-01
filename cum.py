@@ -9,4 +9,4 @@ async def _(event):
     if event.fwd_from:
         return
     for i in range(100):
-        await event.edit("cum ".join(str(i)))
+        await event.edit("cum " + str(i))
