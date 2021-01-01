@@ -8,4 +8,4 @@ async def _(event):
     strings = {'name': 'bruh'}
     if event.fwd_from:
         return
-    await event.edit("".join("cum"))
+    await event.edit("cum")
