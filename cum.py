@@ -8,4 +8,5 @@ async def _(event):
     strings = {'name': 'bruh'}
     if event.fwd_from:
         return
-    await event.edit("cum")
+    for i in range(100):
+        await event.edit("cum " + i)
