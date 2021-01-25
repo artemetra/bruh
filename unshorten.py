@@ -17,4 +17,4 @@ class unsh(loader.Module):
         test = requests.get('https://unshorten.me/s/goo.gl/IGL1lE')
         test.json()
         reply = await event.get_reply_message()
-        await event.client.send_message(event.to_id, test, reply_to=reply)
+        await event.client.send_message(event.to_id, str(test), reply_to=reply)
