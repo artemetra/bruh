@@ -1,6 +1,7 @@
 from .. import loader, utils
 import asyncio
 import requests
+from userbot.events import register
 
 @register(outgoing=True, pattern="^.unsh (.*)")
 
