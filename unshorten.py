@@ -6,9 +6,6 @@ import random
 from userbot.events import register
 import requests
 
-#def register(cb):
-#	cb(unsh())
-
 class unsh(loader.Module):
     strings = {'name': 'Unshorten Links'}
     async def unsh(self, message):
