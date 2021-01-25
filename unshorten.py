@@ -1,4 +1,4 @@
-from asyncio
+import asyncio
 from random import choice, randint
 from telethon import functions
 from .. import loader, utils
