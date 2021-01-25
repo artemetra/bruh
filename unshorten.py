@@ -1,7 +1,10 @@
+from asyncio
+from random import choice, randint
+from telethon import functions
 from .. import loader, utils
-import asyncio
-import requests
+import random
 from userbot.events import register
+import requests
 
 @register(outgoing=True, pattern="^.unsh (.*)")
 
