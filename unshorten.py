@@ -9,7 +9,7 @@ import requests
 
 class unsh(loader.Module):
     strings = {'name': 'Unshorten Links'}
-    async def unsh(event):
+    async def unsh(self, message, event):
         test = requests.get('https://unshorten.me/s/goo.gl/IGL1lE')
         #test.json()
         reply = await event.get_reply_message()
