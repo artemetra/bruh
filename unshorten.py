@@ -3,7 +3,7 @@ from random import choice, randint
 from telethon import functions
 from .. import loader, utils
 import random
-from userbot.messages import register
+#from userbot.messages import register
 import requests
 
 #def register(cb):
