@@ -21,8 +21,9 @@ class YourMod(loader.Module):
     async def unshcmd(self, message):
         """Does something when you type .example (hence, named examplecmd)"""
         logger.debug("We logged something!")
+        args = utils.get_args(message)
         #await utils.answer(message, self.config["CONFIG_STRING"])
         #await asyncio.sleep(5)  # Never use time.sleep
         #await utils.answer(message, self.strings("after_sleep", message))
-        test = requests.get('https://unshorten.me/s/goo.gl/IGL1lE')
-        await utils.answer(message, "cum: "+ str(test.text))
+        test = requests.get('https://unshorten.me/raw/' + args)
+        await utils.answer(message, str(test.text))
