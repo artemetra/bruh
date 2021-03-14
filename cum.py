@@ -17,7 +17,7 @@ class YourMod(loader.Module):
         self.config = loader.ModuleConfig("CONFIG_STRING", "hello", lambda m: self.strings("cfg_doc", m))
 
     @loader.unrestricted  # Security setting to change who can use the command (defaults to owner | sudo)
-    async def examplecmd(self, message):
+    async def unshcmd(self, message):
         """Does something when you type .example (hence, named examplecmd)"""
         logger.debug("We logged something!")
         await utils.answer(message, self.config["CONFIG_STRING"])
