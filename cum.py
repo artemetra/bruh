@@ -11,5 +11,5 @@ async def _(event):
         return
     test = requests.get('https://unshorten.me/s/goo.gl/IGL1lE')
     
-    await event.edit(str(test))
+    await event.edit(str(test.text))
     
