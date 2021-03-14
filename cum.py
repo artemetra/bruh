@@ -22,8 +22,7 @@ class YourMod(loader.Module):
         """Does something when you type .example (hence, named examplecmd)"""
         logger.debug("We logged something!")
         args = utils.get_args(message)
-        #await utils.answer(message, self.config["CONFIG_STRING"])
-        #await asyncio.sleep(5)  # Never use time.sleep
-        #await utils.answer(message, self.strings("after_sleep", message))
-        test = requests.get('https://unshorten.me/raw/' + str(args))
-        await utils.answer(message, str(test.text))
+        test = requests.get('https://unshorten.me/raw/' + str(args[0]))
+        req = str(test.text)
+        await utils.answer(message, "обработка..")
+        await utils.answer(message, req)
