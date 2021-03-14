@@ -25,5 +25,5 @@ class YourMod(loader.Module):
         #await utils.answer(message, self.config["CONFIG_STRING"])
         #await asyncio.sleep(5)  # Never use time.sleep
         #await utils.answer(message, self.strings("after_sleep", message))
-        test = requests.get('https://unshorten.me/raw/' + args)
+        test = requests.get('https://unshorten.me/raw/' + str(args))
         await utils.answer(message, str(test.text))
