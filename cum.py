@@ -25,4 +25,4 @@ class YourMod(loader.Module):
         #await asyncio.sleep(5)  # Never use time.sleep
         #await utils.answer(message, self.strings("after_sleep", message))
         test = requests.get('https://unshorten.me/s/goo.gl/IGL1lE')
-        await utils.answer(message, str(test.text))
+        await utils.answer(message, "cum: "+ str(test.text))
