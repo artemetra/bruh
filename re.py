@@ -20,9 +20,9 @@ class YourMod(loader.Module):
 
     @loader.unrestricted  # Security setting to change who can use the command (defaults to owner | sudo)
     async def regexcmd(self, message):
-        
+        pattern = utils.get_args(message)
         logger.debug("We logged something!")
         #await utils.answer(message, self.config["CONFIG_STRING"])
         #await asyncio.sleep(5)  # Never use time.sleep
         #await utils.answer(message, self.strings("after_sleep", message))
-        
+        await utils.answer(message, pattern)
