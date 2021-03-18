@@ -21,6 +21,6 @@ class YourMod(loader.Module):
     @loader.unrestricted  # Security setting to change who can use the command (defaults to owner | sudo)
     async def regexcmd(self, message):
         pattern = utils.get_args(message)
-        #pattern = str(pattern)
+        pattern = str(pattern[0])
         #pattern = pattern.replace('/', '//')
         await utils.answer(message, str(pattern))
