@@ -21,8 +21,8 @@ class YourMod(loader.Module):
     async def unshcmd(self, message):
         """Does something when you type .example (hence, named examplecmd)"""
         logger.debug("We logged something!")
+        await utils.answer(message, "обработка..")
         args = utils.get_args(message)
         test = requests.get('https://unshorten.me/raw/' + str(args[0]))
         req = str(test.text)
-        await utils.answer(message, "обработка..")
         await utils.answer(message, req)
